@@ -68,7 +68,6 @@ type EKSAPI interface {
 	UpdatePodIdentityAssociation(ctx context.Context, params *eks.UpdatePodIdentityAssociationInput, optFns ...func(*eks.Options)) (*eks.UpdatePodIdentityAssociationOutput, error)
 	DeletePodIdentityAssociation(ctx context.Context, params *eks.DeletePodIdentityAssociationInput, optFns ...func(*eks.Options)) (*eks.DeletePodIdentityAssociationOutput, error)
 
-
 	// Waiters for EKS Cluster
 	WaitUntilClusterActive(ctx context.Context, params *eks.DescribeClusterInput, maxWait time.Duration) error
 	WaitUntilClusterDeleted(ctx context.Context, params *eks.DescribeClusterInput, maxWait time.Duration) error
