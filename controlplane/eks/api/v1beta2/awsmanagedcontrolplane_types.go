@@ -196,6 +196,10 @@ type AWSManagedControlPlaneSpec struct { //nolint: maligned
 	// +optional
 	AccessConfig *AccessConfig `json:"accessConfig,omitempty"`
 
+	// PodIdentityAssociations map IAM roles to Kubernetes Service Accounts using EKS Pod Identities.
+	// The AWS EKS addon for Pod Identity must be installed in the cluster to use this feature.
+	// +optional
+	PodIdentityAssociations []PodIdentityAssociation `json:"podIdentityAssociations,omitempty"`
 	// VpcCni is used to set configuration options for the VPC CNI plugin
 	// +optional
 	VpcCni VpcCni `json:"vpcCni,omitempty"`
