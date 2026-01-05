@@ -200,6 +200,7 @@ type AWSManagedControlPlaneSpec struct { //nolint: maligned
 	// The AWS EKS addon for Pod Identity must be installed in the cluster to use this feature.
 	// +optional
 	PodIdentityAssociations []PodIdentityAssociation `json:"podIdentityAssociations,omitempty"`
+
 	// VpcCni is used to set configuration options for the VPC CNI plugin
 	// +optional
 	VpcCni VpcCni `json:"vpcCni,omitempty"`

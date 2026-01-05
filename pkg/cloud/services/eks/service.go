@@ -62,6 +62,12 @@ type EKSAPI interface {
 	TagResource(ctx context.Context, params *eks.TagResourceInput, optFns ...func(*eks.Options)) (*eks.TagResourceOutput, error)
 	UntagResource(ctx context.Context, params *eks.UntagResourceInput, optFns ...func(*eks.Options)) (*eks.UntagResourceOutput, error)
 	DisassociateIdentityProviderConfig(ctx context.Context, params *eks.DisassociateIdentityProviderConfigInput, optFns ...func(*eks.Options)) (*eks.DisassociateIdentityProviderConfigOutput, error)
+	ListPodIdentityAssociations(ctx context.Context, params *eks.ListPodIdentityAssociationsInput, optFns ...func(*eks.Options)) (*eks.ListPodIdentityAssociationsOutput, error)
+	DescribePodIdentityAssociation(ctx context.Context, params *eks.DescribePodIdentityAssociationInput, optFns ...func(*eks.Options)) (*eks.DescribePodIdentityAssociationOutput, error)
+	CreatePodIdentityAssociation(ctx context.Context, params *eks.CreatePodIdentityAssociationInput, optFns ...func(*eks.Options)) (*eks.CreatePodIdentityAssociationOutput, error)
+	UpdatePodIdentityAssociation(ctx context.Context, params *eks.UpdatePodIdentityAssociationInput, optFns ...func(*eks.Options)) (*eks.UpdatePodIdentityAssociationOutput, error)
+	DeletePodIdentityAssociation(ctx context.Context, params *eks.DeletePodIdentityAssociationInput, optFns ...func(*eks.Options)) (*eks.DeletePodIdentityAssociationOutput, error)
+
 
 	// Waiters for EKS Cluster
 	WaitUntilClusterActive(ctx context.Context, params *eks.DescribeClusterInput, maxWait time.Duration) error
